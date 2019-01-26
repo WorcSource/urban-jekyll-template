@@ -4,6 +4,8 @@ baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
+meetup_link: https://www.meetup.com/Worcester-Source-Meetup/
+slack_link: http://bit.ly/worcsourceslack
 
 # Default description in social shares for the jekyll-seo-tag gem
 description: Jekyll template with example content for a web agency.
