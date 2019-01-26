@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  jekyll:
+    image: bretfisher/jekyll-serve
+    volumes:
+      - .:/site
+    ports:
+      - '4000:4000'      # http
+      - '35729:35729'    # livereload
+    command: ["bundle", "exec", "jekyll", "serve", "--force_polling", "--livereload", "-H", "0.0.0.0", "-P", "4000"]
