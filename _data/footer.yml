@@ -12,19 +12,15 @@
       link: /contact/
 - title: Social
   links:
-    - name: Facebook
-      link:
-      social_icon: Facebook
-      new_window: true
+    - name: Meetup
+      link: https://www.meetup.com/Worcester-Source-Meetup/
+      social_icon: Meetup
+      new_window: false
+    - name: Slack
+      link: http://bit.ly/worcsourceslack
+      social_icon: Slack
+      new_window: false
     - name: Twitter
-      link:
+      link: https://twitter.com/WorcSource
       social_icon: Twitter
-      new_window: true
-    - name: Google+
-      link:
-      social_icon: Google Plus
-      new_window: true
-    - name: LinkedIn
-      link:
-      social_icon: LinkedIn
-      new_window: true
+      new_window: false
