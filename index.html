@@ -4,28 +4,31 @@ title: Urban
 
 <section class="hero diagonal">
 	<div class="container">
-		<h2 class="editable">We're a local meetup group...</h2>
+		<h2 class="editable">A local meetup group...</h2>
 		<p class="subtext editable">...that inspires, motivates, and connects <em>technical professionals</em> in Worcestershire.</p>
 		<p><a class="button alt" href="{{ site.meetup_link }}">Join Now</a></p>
 	</div>
 </section>
 
+{% for event in site.data.upcoming_events limit:1 %}
 <section class="diagonal patterned">
 	<div class="container halves">
 		<div>
-			<h3 class="editable">Some of our work</h3>
-			<p class="editable">We take pride in our previous work and our happy customers. We cater to any sector to boost business and increase exposure.</p>
-			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">View Full Portfolio &rarr;</a></p>
+			<h3 class="editable">Our next event:</h3>
+			<p class="editable"><strong>{{ event.name }}</strong><br /><em>({{ event.local_date | date_to_string }} at {{ event.local_time }})</em></p>
+			<p class="editable">{{ event.description | strip_html | truncatewords: 40 }}</p>
+			<p class="editable"><a href="{{ event.link }}">Find out more &rarr;</a></p>
 		</div>
 		<div>
-			<ul class="image-grid">
-				{% for client in site.clients limit: 4 %}
-					<li><a href="{{ site.baseurl }}{{ client.url }}"><img src="{% include relative-src.html src=client.image_path %}"></a></li>
-				{% endfor %}
-			</ul>
+			{% if event.featured_photo %}
+				<a href="{{ event.link }}"><img src="{{ event.featured_photo.highres_link }}"></a>
+			{% else %}
+				<a href="{{ event.link }}"><img src="{{ site.base_url }}/images/event_missing_photo.jpg"></a>
+			{% endif %}
 		</div>
 	</div>
 </section>
+{% endfor %}
 
 <section class="diagonal alternate">
 	<div class="container halves">

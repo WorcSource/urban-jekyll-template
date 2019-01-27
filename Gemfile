@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'hash-joiner' # Required for jekyll get
 gem 'jekyll', '~> 3.8'
 
 group :jekyll_plugins do

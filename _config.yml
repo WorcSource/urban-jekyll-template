@@ -1,5 +1,5 @@
-title: Urban Template
-url: "https://teal-worm.cloudvent.net"
+title: Worcester Source
+url: "https://worcestersoure.club"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
@@ -43,6 +43,8 @@ plugins:
   - "jekyll-seo-tag"
   - "jekyll-paginate"
   - "jekyll-archives"
+
+plugins_dir: ./_plugins
 
 exclude:
   - Gemfile
@@ -101,3 +103,10 @@ social_icons:
   - Twitter
   - YouTube
   - RSS
+
+# Jekyll Get
+jekyll_get:
+  - data: upcoming_events
+    json: 'https://api.meetup.com/Worcester-Source-Meetup/events?&sign=true&photo-host=secure&fields=featured_photo'
+  - data: past_events
+    json: 'https://api.meetup.com/Worcester-Source-Meetup/events?&sign=true&photo-host=secure&fields=featured_photo&desc=true&status=past'
