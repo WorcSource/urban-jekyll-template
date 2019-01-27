@@ -6,16 +6,17 @@ title: Meetup group for Technical Professionals in Worcestershire
 	<div class="container">
 		<h2 class="editable">A local meetup group...</h2>
 		<p class="subtext editable">...that inspires, motivates, and connects <em>technical professionals</em> in Worcestershire.</p>
-		<p><a class="button alt" href="{{ site.meetup_link }}">Join Now</a></p>
+		<p><a class="button alt" href="https://www.meetup.com/Worcester-Source-Meetup/">Join Now</a></p>
 	</div>
 </section>
 
 {% for event in site.data.upcoming_events limit:1 %}
 <section class="diagonal patterned">
 	<div class="container halves">
-		<div>
+		<div class="blog-post">
 			<h3 class="editable">Our next event:</h3>
-			<p class="editable"><strong>{{ event.name }}</strong><br /><em>({{ event.local_date | date_to_string }} at {{ event.local_time }})</em></p>
+			<p class="editable"><strong>{{ event.name }}</strong></p>
+            <p class="post-details"><span class="post-date">({{ event.local_date | date_to_string }} at {{ event.local_time }})</span></p>
 			<p class="editable">{{ event.description | strip_html | truncatewords: 40 }}</p>
 			<p class="editable"><a href="{{ event.link }}">Find out more &rarr;</a></p>
 		</div>
@@ -29,19 +30,3 @@ title: Meetup group for Technical Professionals in Worcestershire
 	</div>
 </section>
 {% endfor %}
-
-<section class="diagonal alternate">
-	<div class="container halves">
-		<div>
-			<ul class="image-list">
-				<li><img src="{{ site.baseurl }}/images/worcester_source.png" width="300" style="margin-bottom: 40px;"></li>
-				<li><img src="{{ site.baseurl }}/images/meetup.png" width="250"></li>
-			</ul>
-		</div>
-		<div>
-			<h3 class="editable">About us</h3>
-			<p class="editable"><strong>Worcester Source</strong> is a monthly meetup group hosted on the fourth Wednesday of each month in the back-room of the Paul Pry pub in central Worcester.</p>
-			<p class="editable">Each meet features time for networking and refreshments, the featured presentation, and a round table discussion which extends the themes of the talk, with a “what I learnt” discussion the following day on the group’s Slack channel.</p>
-		</div>
-	</div>
-</section>

@@ -1,9 +1,9 @@
 links:
-- name: Portfolio
-  link: /portfolio/
-- name: Blog
-  link: /blog/
 - name: About
   link: /about/
-- name: Contact
-  link: /contact/
+- name: Upcoming Events
+  link: /upcoming/
+- name: Past Events
+  link: /past/
+- name: Sponsorship
+  link: /sponsorship/

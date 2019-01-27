@@ -1,16 +1,44 @@
 ---
 title: About
-heading: Our team
-subtitle: Meet our efficient and qualified team.
+heading: About
+subtitle: See what makes us tick
 ---
 
 <section class="diagonal patterned">
 	<div class="container">
-	    <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong>Manage Staff members</a></p>
-		<ul class="image-grid">
-			{% for member in site.staff_members %}
-				<li>{% include staff-member.html member=member %}</li>
-			{% endfor %}
+		<div class="container halves">
+			<div>
+				<ul class="image-list">
+					<li><img src="{{ site.baseurl }}/images/worcester_source.png" width="300" style="margin-bottom: 40px;"></li>
+					<li><img src="{{ site.baseurl }}/images/meetup.png" width="250"></li>
+				</ul>
+			</div>
+			<div>
+				<p>Worcester Source is a monthly meetup group hosted on the fourth Wednesday of each month in the back-room of the Paul Pry pub in central Worcester.</p>
+				<p>Each meet features time for networking and refreshments, the featured presentation, and a round table discussion which extends the themes of the talk, with a “what I learnt” discussion the following day on the group’s Slack channel.</p>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="diagonal alternate">
+	<div class="text container">
+		<h2>Vision</h2>
+		<p>To inspire, motivate, and connect technical professionals in Worcestershire.</p>
+
+		<h2>Mission</h2>
+		<p>To build a community of technical professionals by hosting regularly-scheduled talks and seminars on topics of interest presented by experts in their field.</p>
+
+		<h2>What is a Technical Professional?</h2>
+		<p>We believe that most people who fit into this group are self-identifying, but for everyone else, this group includes but isn't limited to:</p>
+		<ul>
+			<li>Developers and programmers</li>
+			<li>System administrators</li>
+			<li>Technical business owners</li>
+			<li>Product and project managers</li>
+			<li>Designers</li>
+			<li>Social media and marketing specialists</li>
 		</ul>
 	</div>
 </section>

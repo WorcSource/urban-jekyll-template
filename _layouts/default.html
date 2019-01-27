@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		{% seo %}
-		{% feed_meta %}
 
 		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed:500,500i|Montserrat:400,400i,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
@@ -27,7 +26,7 @@
 	<body>
 		<header>
 			<div class="container">
-				<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.png" alt="Urban" width="300"></a></h1>
+				<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.png" alt="{{ site.title }}" width="300"></a></h1>
 				{% include navigation.html %}
 			</div>
 		</header>
@@ -56,20 +55,12 @@
 							{% endfor %}
 						</ul>
 					{% endfor %}
-
-					<ul class="footer-links">
-						<li>
-							<h2>{{ site.data.company.title }}</h2>
-						</li>
-						<li>{{ site.data.company.description }}</li>
-						<li><a href="{{ site.baseurl }}/feed.xml">{% include social-icon.html icon="RSS" %} Subscribe with RSS</a></li>
-					</ul>
 				</div>
 			</div>
 
 			<div class="legal-line">
 				<p class="container">
-					&copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
+					&copy; {{ site.time | date: '%Y' }} {{ site.title }}
 					&bull;
 					Template by <a href="http://cloudcannon.com/">CloudCannon</a>
 				</p>
