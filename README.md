@@ -1,78 +1,31 @@
-# Urban
+# worcestersource.club
 
-Web Agency themed business template for Jekyll. Browse through a [live demo](https://teal-worm.cloudvent.net/).
-Increase the web presence of your agency with this configurable theme.
+The group's homepage, based on the Urban Jekyll Template by [CloudCannon](http://cloudcannon.com/).
 
-![Urban template screenshot](images/_screenshot.png)
+This is a fairly standard Jekyll project, with the exception that some content is generated dynamically from the [meetup.com API](https://www.meetup.com/meetup_api/) via the [jekyll-get plugin](https://github.com/18F/jekyll-get).
 
-Urban was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+There is provision to use the site as a blog, but at present this isn't used.
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
-
-## Features
-
-* Contact form
-* Pre-built pages
-* Pre-styled components
-* Blog with pagination
-* Post category pages
-* Disqus comments for posts
-* Staff and author system
-* Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
-
-## Setup
-
-1. Add your site and author details in `_config.yml`.
-2. Add your Google Analytics and Disqus keys to `_config.yml`.
-3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+There are also some remnants of the CloudCannon customisation which isn't utilised, such as editable content areas, and data elements like `_staff_members` and `_clients`. These have not been removed, as they could be used for blog authors and sponsors, respectively.
 
 ## Develop
 
-Urban was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+This project uses the [jekyll-serve Docker image](https://github.com/BretFisher/jekyll-serve) and live-reload for development purposes, allowing for quick and easy set-up of a development environment.
 
-Install the dependencies with [Bundler](http://bundler.io/):
-
-~~~bash
-$ bundle install
-~~~
-
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+Simply run docker compose, then visit <http://localhost:4000/> in the browser:
 
 ~~~bash
-$ bundle exec jekyll serve
+$ docker-compose up
 ~~~
 
-## Editing
+If you make changes to the `_config.yml` file, you'll need to restart docker compose.
 
-Urban is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
+~~~bash
+$ docker-compose restart
+~~~
 
-### Posts
+## Deployment
 
-* Add, update or remove a post in the *Posts* collection.
-* The **Staff Author** field links to members in the **Staff** collection.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
+The site is hosted by [Netlify](https://app.netlify.com/), and configured to automatically deploy upon every commit on the `master` branch which is pushed to GitHub.
 
-### Contact Form
-
-* Preconfigured to work with [CloudCannon](https://app.cloudcannon.com/), but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
-* Sends email to the address listed in company details.
-
-### Staff
-
-* Reused around the site to save multiple editing locations.
-* Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
-
-### Footer
-
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Footer* section.
-
-### Company details
-
-* Reused around the site to save multiple editing locations.
-* Set in the *Data* / *Company* section.
+Additionally, because of the dynamic content pulled in from meetup.com, we're using [cron-job.org](https://cron-job.org/) to trigger a built of the site once a day.
