@@ -10,6 +10,8 @@
       link: /past/
     - name: Sponsorship
       link: /sponsorship/
+    - name: Code of Conduct
+      link: /conduct/
 - title: Social
   links:
     - name: Meetup
