@@ -26,6 +26,10 @@
       link: https://twitter.com/WorcSource
       social_icon: Twitter
       new_window: false
+    - name: Facebook
+      link: https://www.facebook.com/worcsource/
+      social_icon: Facebook
+      new_window: false
 - title: Our Friends
   links:
     - name: WINN - Worcestershire Innovation
