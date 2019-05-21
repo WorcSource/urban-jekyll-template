@@ -19,7 +19,7 @@
       social_icon: Meetup
       new_window: false
     - name: Slack
-      link: http://bit.ly/worcsourceslack
+      link: https://worcester.space/
       social_icon: Slack
       new_window: false
     - name: Twitter
@@ -32,6 +32,8 @@
       new_window: false
 - title: Our Friends
   links:
+    - name: Worcester Space
+      link: https://worcester.space/
     - name: WINN - Worcestershire Innovation
       link: https://winn-hub.com/
     - name: StackChat
