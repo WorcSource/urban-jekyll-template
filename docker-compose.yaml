@@ -4,8 +4,8 @@ services:
   jekyll:
     image: bretfisher/jekyll-serve
     volumes:
-      - .:/site
+      - .:/site:cached
     ports:
-      - '4000:4000'      # http
-      - '35729:35729'    # livereload
-    command: ["bundle", "exec", "jekyll", "serve", "--force_polling", "--livereload", "-H", "0.0.0.0", "-P", "4000"]
+      - '4001:4001'      # http
+      - '35731:35731'    # livereload
+    command: ["bundle", "exec", "jekyll", "serve", "--force_polling", "--livereload", "--livereload_port", "35731", "-H", "0.0.0.0", "-P", "4001"]
