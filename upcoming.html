@@ -5,9 +5,16 @@ subtitle: See what we've got planned
 ---
 
 <section class="diagonal">
-	<div class="text-container">
-        <ul class="blog-posts">
-            {% include events.html events=site.data.upcoming_events %}
-        </ul>
-	</div>
+  <div class="text-container">
+    {% assign upcoming_events_size = site.data.upcoming_events | size %}
+    {% if site.data.upcoming_events > 0 %}
+      <p>why not zoidberg?</p>
+      <ul class="blog-posts">
+        {% include events.html events=site.data.upcoming_events %}
+      </ul>
+    {% else %}
+      <p>We don't currently have any upcoming events, so join the group to be notified when we schedule the next one.</p>
+      <p><a href="https://www.meetup.com/Worcester-Source-Meetup/">Join Now</a></p>
+    {% endif %}
+  </div>
 </section>
