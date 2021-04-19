@@ -19,7 +19,7 @@
       social_icon: Meetup
       new_window: false
     - name: Slack
-      link: https://worcester.space/
+      link: https://join.slack.com/t/worcestersource/shared_invite/zt-4x3pl3mr-f64uhrkq~uvarH3c~~gYSA
       social_icon: Slack
       new_window: false
     - name: Twitter
@@ -32,15 +32,11 @@
       new_window: false
 - title: Our Friends
   links:
-    - name: Worcester Space
-      link: https://worcester.space/
     - name: Planet Worcester
       link: https://planet.worcester.space/
     - name: "Make: Worcester"
       link: https://www.downtomeet.com/Make-Worcester
     - name: WINN - Worcestershire Innovation
       link: https://winn-hub.com/
-    - name: StackChat
-      link: https://stackchat.uk/
     - name: The Kiln
       link: https://www.meetup.com/the-kiln/
